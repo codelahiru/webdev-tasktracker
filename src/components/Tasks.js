@@ -70,16 +70,16 @@ const Tasks = () => {
         },
     ])
   return (
-  <>
-      {tasks.map(function renderTask(task) {
-        return <h3 key={task.id}>{task.text}</h3>;
-        }
-      )}
-  </>
+    <>
+      {tasks.map((task) => (
+        <h3 key={task.id}>{task.text}</h3>
+      ))}
+    </>
   )
 }
 
-
-
+Tasks.propTypes = {
+  tasks: PropTypes.array.isRequired,
+}
 
 export default Tasks
